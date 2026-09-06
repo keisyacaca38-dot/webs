@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f3ef; /* Warna krem netral */
+    color: #000000; /* Warna teks gelap netral */
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #e5e3dc;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2819ac;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0e0844; /* Hijau sage netral */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Slide Styling */
+.slider-box {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(81, 25, 133, 0.05);
+    max-width: 500px;
+    width: 100%;
+}
+
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slider-tools {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    background: #f0efe9;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Efek Riak Sentuhan (Touch Effect) */
+.ripple {
+    position: absolute;
+    background: rgba(8, 10, 134, 0.3);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
